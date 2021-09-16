@@ -1,10 +1,12 @@
-import pygame
 import time
-from code.grid import Grid
+
+import pygame
+
 from code.board import Board
+from code.grid import Grid
+from code.help_button import HelpButton
 from code.new_game_button import NewGameButton
 from code.show_solution_button import ShowSolutionButton
-from code.help_button import HelpButton
 
 BOARD_SIZE = (540, 540)
 
@@ -233,3 +235,4 @@ class GameWindow:
         row, column = map(lambda x: x // 60, position)
         if row < 9 and column < 9:
             self.grid.select_box_by_coordinates((column, row))
+

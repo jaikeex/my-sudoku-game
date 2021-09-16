@@ -1,4 +1,5 @@
 import unittest
+
 from code.board import Board
 from code.grid import Grid
 

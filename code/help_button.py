@@ -1,4 +1,5 @@
 import pygame
+
 from code.button import Button
 
 BLACK = (0, 0, 0)

@@ -1,7 +1,8 @@
-from random import shuffle
-from random import choice
-from copy import deepcopy
 from collections import Counter
+from copy import deepcopy
+from random import choice
+from random import shuffle
+
 
 class Board:
     """Manages the board state at the base level, including creation
@@ -21,8 +22,8 @@ class Board:
 
     def solve(self):
         """
-        Solves the board using backtracking algorithm.
-        :return: True if the solution is found, False otherwise
+        Solves the active board using backtracking algorithm.
+        :return: True if a solution is found, False otherwise
         :rtype: bool
         """
         if self.is_solved():
@@ -66,7 +67,7 @@ class Board:
     def _find_empty(self):
         for row in range(self._size):
             for column in range(self._size):
-                if not self.model[row][column]:
+                if self.model[row][column] == 0:
                     return row, column
         return False
 

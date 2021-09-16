@@ -1,7 +1,6 @@
 import pygame
-from code.box import Box
 
-from copy import deepcopy
+from code.box import Box
 
 BLACK = (0, 0, 0)
 GRAY = (100, 100, 100)
@@ -91,7 +90,7 @@ class Grid:
         """
         box = self._find_box_by_coordinates(coordinates)
         self._place_permanent_number_in_box(box)
-        if self.is_board_solvable():
+        if self.board.is_valid_number(box.number, (box.row, box.column)):
             self.remove_useless_pencil_number(box)
             return True
         else:

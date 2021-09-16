@@ -1,3 +1,4 @@
+
 from code.game_window import GameWindow
 
 if __name__ == '__main__':
